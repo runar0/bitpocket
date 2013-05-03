@@ -387,15 +387,15 @@ function check_fallback_host {
 
 function pre_hook {
   if [ -f "$PRE_HOOK" ]; then
-    echo "Executing pre-hook script"
-    $PRE_HOOK
+    echo "# Running pre-hook script"
+    $PRE_HOOK | sed "s/^/  | /"
   fi
 }
 
 function post_hook {
   if [ -f "$POST_HOOK" ]; then
-    echo "Executing post-hook script"
-    $POST_HOOK
+    echo "# Running post-hook script"
+    $POST_HOOK | sed "s/^/  | /"
   fi
 }
 

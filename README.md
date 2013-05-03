@@ -224,6 +224,15 @@ You can show tray icon during long sync with
     SLOW_SYNC_START_CMD='~/bin/traytor -t "BitPocket syncing..." -c "xdg-open ." .bitpocket/icons & echo $! >.bitpocket/traytor.pid'
     SLOW_SYNC_STOP_CMD='kill `cat .bitpocket/traytor.pid`'
 
+### Pre and Post backup hooks
+
+Before bitpocket performs a sync with the remote server it has an option to
+call a user defined script. In order to enable this a script named pre-hook
+must be added in the .bitpocket directory. Equally a post-hook script, which
+will be executed after the backup process is done, can be added.
+
+These hooks can be used to perform final preperations of the folder before 
+it is synced, aswell as doing cleanup after the sync has been done.
 
 ## Author
 
