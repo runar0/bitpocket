@@ -1,8 +1,7 @@
 # bitpocket
 
 ## Fork
-This is my fork of the [project](/sickill/bitpocket), check out the 
-original project by [sickill](/sickill)
+This is my fork of the [project](http://www.github.com/sickill/bitpocket), check out the original project by [sickill](http://www.github.com/sickill)
 
 [![Build Status](https://travis-ci.org/Runar0/bitpocket.png?branch=master)](https://travis-ci.org/Runar0/bitpocket)
 
