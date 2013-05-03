@@ -1,6 +1,10 @@
 # bitpocket
 
-[![Build Status](https://secure.travis-ci.org/sickill/bitpocket.png?branch=master)](http://travis-ci.org/sickill/bitpocket)
+## Fork
+This is my fork of the [project](/sickill/bitpocket), check out the 
+original project by [sickill](/sickill)
+
+[![Build Status](https://travis-ci.org/Runar0/bitpocket.png?branch=master)](https://travis-ci.org/Runar0/bitpocket)
 
 
 ## About
