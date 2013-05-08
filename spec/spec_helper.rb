@@ -63,8 +63,8 @@ shared_context 'setup' do
   before do
     TEST_CASE[:num] += 1
     test_case_dir = File.join(@tmp_dir, TEST_CASE[:num].to_s)
-    @local_dir = File.join(test_case_dir, 'local')
-    @remote_dir = File.join(test_case_dir, 'remote')
+    @local_dir = File.join(test_case_dir, 'local dir')
+    @remote_dir = File.join(test_case_dir, 'remote dir')
     FileUtils.mkdir_p(@local_dir)
     FileUtils.mkdir_p(@remote_dir)
     Dir.chdir(@local_dir)
