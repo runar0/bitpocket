@@ -10,11 +10,11 @@ def sync(opts={})
 end
 
 def local_path(fname)
-  "#{@local_dir}/#{fname}"
+  File.join(@local_dir, fname)
 end
 
 def remote_path(fname)
-  "#{@remote_dir}/#{fname}"
+  File.join(@remote_dir, fname)
 end
 
 def touch(path)
@@ -68,8 +68,8 @@ shared_context 'setup' do
     FileUtils.mkdir_p(@local_dir)
     FileUtils.mkdir_p(@remote_dir)
     Dir.chdir(@local_dir)
-    FileUtils.mkdir_p("#{@local_dir}/.bitpocket")
-    cat "REMOTE_PATH=#{@remote_dir}", local_path('.bitpocket/config')
+    FileUtils.mkdir_p local_path(".bitpocket")
+    cat "REMOTE_PATH=\"#{@remote_dir}\"", local_path('.bitpocket/config')
   end
 
   let(:content) { 'foo' }

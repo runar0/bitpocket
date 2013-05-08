@@ -18,9 +18,9 @@ describe 'bitpocket sync' do
     sync.should succeed
 
     if RUBY_PLATFORM =~ /darwin/
-      system "touch -mt 200801120000 #{remote_path('a')}"
+      system "touch -mt 200801120000 \"#{remote_path('a')}\""
     else
-      system "touch -d '00:00' #{remote_path('a')}"
+      system "touch -d '00:00' \"#{remote_path('a')}\""
     end
 
     cat content, local_path('a')
